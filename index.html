@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haven Camp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="assets/carousel/carousel.css" rel="stylesheet">
+    <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+
+    <style>
+        body{
+            background-color: #0B0B0C;
+        }
+        
+        #container1{
+            border-bottom: 1px #DB672C80 solid;
+            padding-top: 10px;
+        }
+        .header-page{
+            background: linear-gradient(#DB672C20, #0B0B0C),url("assets/cssimg/img1.png");
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: center;
+            box-shadow: 0px 55px 0px #0B0B0C;
+            box-shadow: z;
+            text-align: center;
+        }
+        .dropdown{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          position: relative;
+          left: 620px;
+          padding-left: 60px;
+        }
+        .header-page-content{
+            padding-top: 200px;
+
+        }
+        img.header-page-content{
+            display: none;
+
+        }
+        #havenlogo2header{
+          width: 30%;
+        }
+        .dropdown-menu{
+          --bs-dropdown-font-size: 1.5rem;
+          --bs-dropdown-font-weight: 700;
+          --bs-dropdown-bg:#0B0B0C70;
+          width: 40%;
+        }
+        .dropdown-item{
+          color: #F3F6FF;
+        }
+        .dropdown-item.active, .dropdown-item:active{
+          background-color:#DB672C;
+        }
+        .nav-link{
+            color: #F3F6FF;
+            --bs-nav-link-hover-color: #DB672C;
+        }
+        #reserve{
+            padding: 0;
+            border-radius: 30px;
+            border: 0px;
+            padding-top: 0;
+            padding-bottom: 0;
+            --bs-btn-bg:#DB672C;
+            --bs-btn-hover-bg:#DB672C80;
+            --bs-btn-active-bg:#DB672C80;
+        }
+        #joinus{
+          padding: 0;
+            border-radius: 30px;
+            border: 0px;
+            padding-top: 0;
+            padding-bottom: 0;
+            width: 220px;
+            --bs-btn-bg:#DB672C;
+            --bs-btn-hover-bg:#DB672C80;
+            --bs-btn-active-bg:#DB672C80;
+        }
+        .lead{
+            color: #F3F6FF;
+        }
+        .second-page{
+            padding-top: 300px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 100vh;
+        }
+        .campspots{
+            display: flex;
+            flex-wrap: wrap;
+            width: 55%;
+            text-align: left;
+            margin-left: 150px;
+            position: relative;
+            bottom:120px;
+        }
+        .route{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+            left: 150px;
+        }
+        #pointer1{
+            position: relative;
+            right: 350px;
+            top: 120px;
+        }
+        #pointer2{
+            position: relative;
+            right: 220px;
+            bottom: 120px;
+        }
+        .carousel1{
+          background-image: linear-gradient(#0B0B0C95, #0B0B0C),url(assets/cssimg/spot1.png);
+          background-blend-mode: multiply;
+          background-repeat: no-repeat;
+          background-size: cover;        
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-radius: 100px;
+        }
+        .carousel2{
+          background: linear-gradient(#0B0B0C95, #0B0B0C),url(assets/cssimg/spot2.png);
+          background-blend-mode: multiply;
+          background-repeat: no-repeat;
+          background-size: cover;   
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-radius: 100px;
+        }
+        .carousel3{
+          background: linear-gradient(#0B0B0C95, #0B0B0C),url(assets/cssimg/spot3.png);
+          background-blend-mode: multiply;
+          background-repeat: no-repeat;
+          background-size: cover;   
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-radius: 100px;
+        }
+        .carousel-indicators{
+          position: relative;
+          top: 550px;
+        }
+        .third-page{
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 70vh;
+            margin-top: 200px;
+            background-color: #DB672C;
+            padding-top: 100px;
+        }
+        .thirdpagegrid1{
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+          color: #0B0B0C;
+        }
+        .tpgrid1{
+          position: relative;
+          left: 150px;
+          grid-column: span 3;
+          font-size: 29px;
+          width: 70%;
+        }
+        .tpgrid2{
+          position: relative;
+          left: 190px;
+          font-size: 50px;
+          font-weight: 700;
+        }
+        .tpgrid3{
+          position: relative;
+          left: 80px;
+          font-size: 50px;
+          font-weight: 700;
+        }
+        .tpgrid4{
+          position: relative;
+          right: 40px;
+          font-size: 50px;
+          font-weight: 700;
+        }
+        .tpgrid5{
+          position: relative;
+          left: 190px;
+          bottom: 120px;
+        }
+        .tpgrid6{
+          position: relative;
+          left: 80px;
+          bottom:120px;
+        }
+        .tpgrid7{
+          position: relative;
+          right: 40px;
+          bottom: 120px;
+        }
+        .fourth-page{
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          color: #F3F6FF;
+          height: 70vh;
+        }
+        .fourth-page h1{
+          font-weight: bold;
+          font-size: 45px;
+        }
+        .fourth-page h2{
+          display: flex;
+          flex-wrap: wrap;
+          font-size: 30px;
+          width: 900px;
+          font-weight: lighter;
+          margin-bottom: 50px;
+        }
+        .nav.nav-f{
+        }
+        #copyrightfooter{
+          color: #F3F6FF;
+        }
+        @media screen and (min-width: 370px) and (max-width:425px) {
+          body{
+            max-width: 425px;
+            padding: 0;
+          }
+          #container1{
+            border-bottom: 0px #DB672C80 solid;
+            padding-top: 10px;
+          }
+          .header-page {
+            flex-wrap: wrap;
+            justify-content:center;
+            align-items: center;
+            background-position-x: center;
+            
+          }
+          .dropdown{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+            position: relative;
+            left: 125px;
+            padding-left: 0px;
+          }
+          #havenlogo2header{
+            width: 60%;
+          }
+          .second-page {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 200px;
+            height: auto;
+            padding:0;
+          }
+          #reserve{
+            position: relative;
+            left: 105px;
+            padding: 0;
+            background-color: #DB672C40;
+            border-radius: 30px;
+            border: 0px;
+            padding-top: 0;
+            padding-bottom: 0;
+            --bs-btn-hover-bg:#DB672C;
+            --bs-btn-active-bg:#DB672C;
+            width: 50%;
+        }
+          .route{
+            
+            left: 0px;
+          }
+          .route > img{
+            max-width: 80%;
+            padding: 0;
+          }
+          .campspots{
+            width: 350px;
+            margin: 0;
+            bottom: 0;
+            left: 10px;
+            padding: 0;
+
+            
+          }
+          #pointer1{
+            width: 30%;
+            top: -120px;
+            left: 125px;
+            position: relative;
+          }
+          #pointer2{
+            width: 30%;
+            bottom: 70px;
+            right: 100px;
+            position: relative;
+          }
+          #spotbonfire{
+            position: relative;
+            top: 10px;
+          }
+          .third-page{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            height: auto;
+            flex-direction: column;
+          }
+          .third-page > .thirdpagegrid1{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            height: auto;
+            flex-direction: column;
+            text-align: center;
+          }
+          .tpgrid1{
+            width: 100%;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+          }
+          .tpgrid2{
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+          }
+          .tpgrid3{
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+          }
+          .tpgrid4{
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+          }
+          .tpgrid5{
+            top: -200px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+          }
+          .tpgrid6{
+            top: -150px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+          }
+          .tpgrid7{
+            top: -100px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+          }
+          .thirdpagegrid2 > img{
+            max-width: 100%;
+          }
+
+          .fourth-page{
+            display: block;
+            margin-top: -200px;
+          }
+          
+          .fourth-page h2{
+            display: block;
+            width: 100%;
+          }
+          #joinus{
+            position: relative;
+            left: 105px;
+            width: 200px;
+
+          
+          }
+          #page2point5{
+            text-align: center;
+          }
+          #carouselExampleIndicators{
+            text-align: center;
+          }
+        }
+        
+        
+
+    </style>
+
+</head>
+<body>
+  <!--headerpage start-->
+  <main>
+    <header class="header-page">
+      <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="./assets/cssimg/havenlogo1.png" id="havenlogo1headerpage" >
+          </a>
+          <ul class="dropdown-menu text-small shadow">
+            <li><a class="dropdown-item" href="#">About Camp</a></li>
+            <li><a class="dropdown-item" href="#">Pricing</a></li>
+            <li><a class="dropdown-item" href="#">Join Us</a></li>
+          </ul>
+        </div>
+  
+      </div>
+  
+          
+          
+          
+              <div class="container" id="container1">
+              
+              </div>
+          
+          <div class="header-page-content"> 
+              <img class="d-block mx-auto mb-4 py-5 my-5 havenlogo2" id="havenlogo2header" src="./assets/cssimg/havenlogo2.png" alt=" havenlogo2 "> 
+              <div class="px-5 py-5 my-5 text-center"></div>
+                  <br><br><br^-^heheXD>
+                  
+                  <div class="col-lg-6 mx-auto">
+                  <p class="lead mb-4">Discover Haven Camp, estled in stunning mountain scenery. Find tranquility and adventure in our secluded sanctuary. Hike, relax, and make memories in nature's embrace.</p>
+                  <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                      <button type="button" class="btn btn-primary btn-lg px-4 py-2 gap-4" id="reserve"> <img src="./assets/cssimg/havenlogo1.png" style="height: 2rem; margin-right: -10px; margin-left: -10px; margin-top: -5px;"> Reserve a Spot</button>
+                  </div>
+                  <br>
+                  <h5 style="color: #F3F6FF;">Starts at 999php/night.
+                  </h1>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </main>
+
+    <!--secondpage start-->
+
+    <br><br><br><br><br><br><br><br><br^-^heheXD>
+    <div class="second-page">
+
+        <div class="item route">
+            <img src="./assets/cssimg/Vector 1.png">
+            <p style="color: #F3F6FF;" id="pointer1" ><img src="./assets/cssimg/imgpointer.png" style="height: 3rem;">Sunset Serenity Spot</p>
+            <p style="color: #F3F6FF;" id="pointer2"><img src="./assets/cssimg/imgpointer.png"  style="height: 3rem;">Stellar Vista Point</p>
+        </div>
+
+        <div class="item campspots">
+            <img src="./assets/cssimg/treecamp.png" style="margin-bottom: 30px;">
+            <h1 style="color: #F3F6FF;">Explore mesmerizing camping spots.
+            </h1>
+            <p style="color: #F3F6FF;">Embark on an unforgettable journey at Haven Camp, where you'll wake up to stunning sunrises amidst the towering mountains, witnessing the beauty of nature unfold before your eyes.</p>
+            <p style="color: #F3F6FF;">Spend your days exploring lush forests and encountering wildlife, and as night falls, gather around a crackling bonfire under the star-filled sky. Escape the ordinary and immerse yourself in the breathtaking landscapes of Haven Camp.</p>
+            <img src="./assets/cssimg/mountain.png" id="spotmountain" style="padding-right: 15px;">
+            <img src="./assets/cssimg/bonfire.png" id="spotbonfire">
+        </div>
+    </div>
+    
+    
+        <div id="myCarousel" class="carousel carousel-page slide mb-6" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner" id="page2point5">
+              <div class="carousel-item active">
+                
+                
+                <div class="container" >
+                  
+                  <div class="carousel-caption text-start carousel1">
+                    <img src="./assets/cssimg/spot1.png" style="padding: 0; ">
+                    <h1 style="text-align: center;">Sunset Serenity Spot</h1>
+                    <p class="opacity-75">Breathtaking vista to unwind</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                
+                <div class="container">
+                  <div class="carousel-caption carousel2">
+                    <img src="./assets/cssimg/spot2.png" style="padding: 0;">
+                    <h1>Stellar Vista Point</h1>
+                    <p>Lose yourself in the beauty of the stars</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                
+                <div class="container">
+                  <div class="carousel-caption text-end carousel3">
+                    <img src="./assets/cssimg/spot3.png" style="padding: 0;">
+                    <h1>Fisherman's Haven</h1>
+                    <p>Soak in the beauty of nature</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    <div class="third-page">
+        <div class="thirdpagegrid1">
+          <div class="tpgrid1"><p>Welcome to Haven Camp, where adventure awaits amidst stunning natural beauty. Join us at Haven Camp and make memories that will last a lifetime.</p></div>
+          <div class="tpgrid2"><p>450+ </p></div>
+          <div class="tpgrid3"><p>98%</p></div>
+          <div class="tpgrid4"><p>782K</p></div>
+          <div class="tpgrid5"><p>DAILY GUESTS</p></div>
+          <div class="tpgrid6"><p>SATISFACTION</p></div>
+          <div class="tpgrid7"><p>OVERALL GUESTS</p></div>
+
+        </div>
+
+        <div class="thirdpagegrid2">
+          <img src="./assets/cssimg/img2.png" alt="">
+        </div>
+
+
+    </div>      
+<!--Testimonial-->
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style-type:none;
+}
+a,a:hover{
+    text-decoration: none;
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+body{
+    font-family: 'Montserrat', sans-serif;
+    .testimonial{
+        padding: 100px 0;
+        .row{
+            .tabs{
+                all: unset;
+                margin-right: 50px;
+                display: flex;
+                flex-direction: column;
+                li{
+                    all:unset;
+                    display: block;
+                    position: relative;
+                    
+                    &:nth-child(1){
+                       align-self: flex-end;
+                       &::before{
+                            left: 64%;
+                            bottom: -50px;
+                       }
+                       &::after{
+                            left: 97%;
+                            bottom: -81px;                           
+                       }
+                       figure{
+                            img{
+                                margin-left:auto;
+                            }
+                       }
+                    }
+                    &:nth-child(2){
+                        align-self: flex-start;
+                        &::before{
+                            right: -65px;
+                            top: 50%;                    
+                        }
+                        &::after{
+                            bottom: 101px;
+                            border-radius: 50%;
+                            right: -120px;
+                        }
+                        figure{
+                            img{
+                                margin-right:auto;
+                                max-width: 300px;
+                                width: 100%;
+                                margin-top: -50px;
+                            }
+                        }
+                    }
+                    &:nth-child(3){
+                        align-self: flex-end;
+                        &::before{
+                            right: -10px;
+                            top: -66%;                  
+                        }
+                        &::after{
+                            top: -130px;
+                            border-radius: 50%;
+                            right: -46px;
+                        }
+                        figure{
+                            img{
+                                margin-left:auto;
+                                margin-top: -50px;
+                            }
+                        }
+                        &:focus{
+                            border: 10px solid #DB672C;
+                        }
+                    }
+                    figure{
+                        position: relative;
+                        img{
+                            display: block;
+                        }
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            top:0;
+                            z-index: -1;
+                            width: 100%;
+                            height: 100%;
+                            border: 4px solid #DB672C;
+                            border-radius: 50%;
+                            -webkit-transform: scale(1);
+                            -ms-transform: scale(1);
+                            transform: scale(1);
+                            -webkit-transition: 0.3s;
+                            -o-transition: 0.3s;
+                            transition: 0.3s;
+                        }
+                        &:hover{
+                            &::after{
+                                -webkit-transform: scale(1.1);
+                                -ms-transform: scale(1.1);
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+                &.carousel-indicators{
+                    li.active{
+                        figure{
+                            &::after{
+                                -webkit-transform: scale(1.1);
+                                -ms-transform: scale(1.1);
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+            }
+            .carousel{
+                 h3{
+                    font-size: 20px;
+                    line-height: 1.45;
+                    color: #F3F6FF;
+                    font-weight: 600;
+                    margin-bottom: 0;
+                }
+                h1{
+                    font-size: 40px;
+                    line-height: 1.225;
+                    margin-top: 23px;
+                    font-weight: 700;
+                    margin-bottom: 0;
+                    color: #F3F6FF
+                }
+                .carousel-indicators{
+                    all: unset;
+                    padding-top: 43px;
+                    display: flex;
+                    list-style: none;
+                    li{
+                        background: #F3F6FF;
+                        background-clip: padding-box;
+                        height: 2px;
+                    }
+                }
+                .carousel-inner{
+                   .carousel-item{
+                        .quote-wrapper{
+                            margin-top: 42px;
+                            p{
+                                font-size: 18px;
+                                line-height: 1.72222;
+                                font-weight: 500;
+                                color: #F3F6FF
+                            }
+                            h3{
+                                color: #F3F6FF;
+                                font-weight: 700;
+                                margin-top: 37px;
+                                font-size: 20px;
+                                line-height: 1.45;
+                                text-transform: uppercase;
+                            }
+                        }
+                   }
+                }
+            }
+        }
+    }
+}
+
+</style>
+<script>
+  $(document).ready(function(){
+    $(".testimonial .indicators li").click(function(){
+      var i = $(this).index();
+      var targetElement = $(".testimonial .tabs li");
+      targetElement.eq(i).addClass('active');
+      targetElement.not(targetElement[i]).removeClass('active');
+              });
+              $(".testimonial .tabs li").click(function(){
+                  var targetElement = $(".testimonial .tabs li");
+                  targetElement.addClass('active');
+                  targetElement.not($(this)).removeClass('active');
+              });
+          });
+  $(document).ready(function(){
+      $(".slider .swiper-pagination span").each(function(i){
+          $(this).text(i+1).prepend("0");
+      });
+  });
+</script>
+
+<section class="testimonial">
+  <div class="container">
+      <div class="row">
+        <h2 style="text-align: center; margin-bottom: 50px; font-size: 16px; color: #F3F6FF;">Click the images below</h2>
+          <div class="col-lg-6 d-lg-block">
+              <ol class="carousel-indicators tabs">
+                  <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" >
+                      <figure>
+                          <img src="https://livedemo00.template-help.com/wt_62267_v8/prod-20823-one-service/images/testimonials-01-179x179.png" class="img-fluid" alt="pictures">
+                      </figure>
+                  </li>
+                  <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1">
+                      <figure>
+                          <img src="https://livedemo00.template-help.com/wt_62267_v8/prod-20823-one-service/images/testimonials-02-306x306.png" class="img-fluid" alt="pictures">
+                      </figure>
+                  </li>
+                  <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2">
+                      <figure>
+                          <img src="https://livedemo00.template-help.com/wt_62267_v8/prod-20823-one-service/images/testimonials-03-179x179.png" class="img-fluid" alt="pictures">
+                      </figure>
+                  </li>
+              </ol>
+          </div>
+          <div class="col-lg-6 d-flex justify-content-center align-items-center">
+              <div id="carouselExampleIndicators" data-interval="false" class="carousel slide" data-ride="carousel">
+                  <h3>What People Say About Our Services</h3>
+                  <h1>TESTIMONIALS</h1>
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <div class="quote-wrapper">
+                              <p>"Absolutely thrilled with my experience at Haven Camp! From the moment I arrived, I felt welcomed and at ease."</p>
+                              <h3>Sophie Anderson
+                              </h3>
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <div class="quote-wrapper">
+                              <p>"Me and my friends hand a wonderful experience at HavenCamp! I am praising the safe, welcoming environment, the thoughtful amenities tailored to their needs, and the empowering sense of adventure that made their camping experience both comfortable and memorable."</p>
+                              <h3>Peruere Snezhevna</h3>
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <div class="quote-wrapper">
+                              <p>"Customers like me who have experienced HavenCamp's camping services will very likely to highlight the exceptional hospitality, well-maintained facilities, and unforgettable outdoor adventures that make every stay truly special."</p>
+                              <h3>Boyet Thomas</h3>
+                          </div>
+                      </div>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+  
+</section>
+
+<section class="fourth-page ">
+  <div>
+    <h3>Subscription</h3>
+    <h1>Join Haven Camp To Get The Best Price</h1>
+    <h2>Get wild at Haven Camp! Join us now for the ultimate outdoor experience. Adventure awaits!</h2>
+  </div>
+  <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+    <button type="button" class="btn btn-primary btn-lg px-4 py-2 gap-4" id="joinus"> Join Us</button>
+  </div>
+  
+</section>
+
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-evenly align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 sm-12" id="copyrightfooter">© 2024 Rei and Mella Company, Inc.</p>
+
+    <a href="/" class="col-md-4 sm-12 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <img src="./assets/cssimg/havenlogo2.png" style="width: 12rem; position: relative; top: 10px;" alt="">
+    </a>
+    
+    <ul class="nav nav-f col-md-4 sm-12 justify-content-end">
+      <li class="nav-itemf"><a href="#" class="nav-link px-2 ">Home</a></li>
+      <li class="nav-itemf"><a href="#" class="nav-link px-2 ">Features</a></li>
+      <li class="nav-itemf"><a href="#" class="nav-link px-2 ">Pricing</a></li>
+      <li class="nav-itemf"><a href="#" class="nav-link px-2 ">FAQs</a></li>
+      <li class="nav-itemf"><a href="#" class="nav-link px-2 ">About</a></li>
+    </ul>
+  </footer>
+</div>
+
+
+
+
+
+
+<script src="./assets/js/testimonials.js"></script>
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
